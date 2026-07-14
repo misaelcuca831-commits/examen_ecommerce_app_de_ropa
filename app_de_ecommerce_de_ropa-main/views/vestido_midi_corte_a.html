@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle del Producto</title>
+    <link rel="stylesheet" href="../css/variables.css">
+    <link rel="stylesheet" href="../css/detail.css">
+</head>
+<body>
+
+    <header class="detail-header">
+        <a href="../index.html" class="back-btn">
+            <img src="https://api.iconify.design/lucide:arrow-left.svg" alt="Atrás">
+        </a>
+        <label class="fav-toggle">
+            <input type="checkbox">
+            <span class="heart-icon"></span>
+        </label>
+    </header>
+
+    <main class="detail-container">
+        <section class="product-gallery">
+            <img src="../img/vestido_midi_corte_A.jpg" alt="Producto principal" class="main-image">
+        </section>
+<!--VESTIDO MIDI CORTE A-->
+        <section class="product-info">
+            <div class="info-header">
+                <h2>Vestido Corte Midi A</h2>
+                <div class="rating-badge">
+                    <img src="https://api.iconify.design/lucide:star.svg" alt="Estrella">
+                    <span>4.8</span>
+                </div>
+            </div>
+            
+            <p class="viewers-count">👁️ 124 personas están viendo esto ahora</p>
+
+            <p class="short-description">
+                Diseño ligero y fresco ideal para los días soleados del año... 
+                <label for="modal-toggle" class="see-more-trigger">Ver más</label>
+            </p>
+
+            <input type="checkbox" id="modal-toggle" class="modal-state" style="display: none;">
+
+            <div class="modal-overlay">
+                <div class="modal-content">
+                    <h3>Información Completa</h3>
+                    <p>Este vestido está confeccionado en 100% algodón orgánico, garantizando frescura y durabilidad. Cuenta con un patrón floral único, tirantes ajustables y un cierre sutil en la espalda. 
+                    Ideal para eventos casuales de día o salidas a la playa.</p>
+                    <br>
+                    <label for="modal-toggle" class="close-modal-btn">Ver más</label>
+                </div>
+            </div>
+
+            <hr class="divider">
+
+            <div class="customizer">
+                <h3>Selecciona tu Talla</h3>
+                <div class="selector-group">
+                    <label class="option-chip"><input type="radio" name="size" value="s"><span>S</span></label>
+                    <label class="option-chip"><input type="radio" name="size" value="m" checked><span>M</span></label>
+                    <label class="option-chip"><input type="radio" name="size" value="l"><span>L</span></label>
+                </div>
+
+                <h3>Color</h3>
+                <div class="selector-group">
+                    <label class="color-chip swatch-blue"><input type="radio" name="color" value="azul" checked><span></span></label>
+                    <label class="color-chip swatch-beige"><input type="radio" name="color" value="beige"><span></span></label>
+                </div>
+            </div>
+
+            <div class="purchase-actions">
+                <div class="quantity-counter">
+                    <button type="button">-</button>
+                    <span>1</span>
+                    <button type="button">+</button>
+                </div>
+                <a href="checkout.html" class="buy-btn">
+                    <span>Añadir al Carrito</span>
+                    <span class="total-price">GTQ 150.00</span>
+                </a>
+            </div>
+        </section>
+
+
+    </main>
+
+</body>
+</html>

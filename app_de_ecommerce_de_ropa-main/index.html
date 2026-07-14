@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce - Inicio</title>
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header class="home-header">
+        <div class="user-profile">
+            <img src="./img/mi_foto.jpg" alt="Foto de perfil" class="avatar">
+            <div class="welcome-text">
+                <span>Hola, Bienvenido 👋</span>
+                <h1>David Cuca</h1>
+            </div>
+        </div>
+    </header>
+    <br>
+    <section class="search-section">
+        <div class="search-bar">
+            <img src="https://api.iconify.design/lucide:search.svg" alt="Buscar" class="search-icon">
+            <input type="text" placeholder="Buscar vestidos, camisetas, vaqueros...">
+        </div>
+    </section>
+
+<section class="categories-section">
+    <label class="category-chip">
+        <input type="radio" name="category" value="all" checked>
+        <span>Todos</span>
+    </label>
+
+    <label class="category-chip">
+        <input type="radio" name="category" value="Vestidos">
+        <span>Vestidos</span>
+    </label>
+
+    <label class="category-chip">
+        <input type="radio" name="category" value="Camisetas">
+        <span>Camisetas</span>
+    </label>
+
+    <label class="category-chip">
+        <input type="radio" name="category" value="Verano">
+        <span>Verano</span>
+    </label>
+</section>
+
+<main class="products-grid">
+<!--VESTIDO CASUAL DE VERANO-->
+    <article class="product-card category-Vestidos">
+        <div class="card-image-container">
+            <a href="views/detail.html">
+                <img src="./img/vestido_casual_de_verano.jpeg" alt="Vestido Casual Verano" class="product-img">
+            </a>
+            <label class="fav-btn" aria-label="Añadir a favoritos">
+    <input type="checkbox" class="fav-checkbox">
+    <span class="heart-icon"></span>
+</label>
+        </div>
+        <div class="card-info">
+            <span class="card-category">Vestidos</span>
+            <h3 class="card-title"><a href="views/detail.html">Vestido Casual Verano</a></h3>
+            <div class="card-meta">
+                <span class="card-price">GTQ 175.00</span>
+                <div class="card-rating">
+                    <img src="https://api.iconify.design/lucide:star.svg" alt="Estrella" class="star-icon">
+                    <span>4.8</span>
+                </div>
+            </div>
+        </div>
+    </article>
+<!--VESTIDO MIDI CORTE A-->
+    <article class="product-card category-Vestidos">
+        <div class="card-image-container">
+            <a href="./views/vestido_midi_corte_a.html">
+                <img src="./img/vestido_midi_corte_A.jpg" alt="Vestido Midi Corte A" class="product-img">
+            </a>
+            <label class="fav-btn" aria-label="Añadir a favoritos">
+    <input type="checkbox" class="fav-checkbox">
+    <span class="heart-icon"></span>
+</label>
+        </div>
+        <div class="card-info">
+            <span class="card-category">Vestidos</span>
+            <h3 class="card-title"><a href="./views/vestido_midi_corte_a.html">Vestido Midi Corte A</a></h3>
+            <div class="card-meta">
+                <span class="card-price">GTQ 150.00</span>
+                <div class="card-rating">
+                    <img src="https://api.iconify.design/lucide:star.svg" alt="Estrella" class="star-icon">
+                    <span>5.0</span>
+                </div>
+            </div>
+        </div>
+    </article>
+<!--VESTIDO CAMISERO-->
+    <article class="product-card category-Vestidos">
+        <div class="card-image-container">
+            <a href="views/detail.html">
+                <img src="./img/vestido_camisero.jpg" alt="Vestido Camisero" class="product-img">
+            </a>
+            <label class="fav-btn" aria-label="Añadir a favoritos">
+    <input type="checkbox" class="fav-checkbox">
+    <span class="heart-icon"></span>
+</label>
+        </div>
+        <div class="card-info">
+            <span class="card-category">Vestidos</span>
+            <h3 class="card-title"><a href="views/detail.html">Vestido Camisero</a></h3>
+            <div class="card-meta">
+                <span class="card-price">GTQ 100.00</span>
+                <div class="card-rating">
+                    <img src="https://api.iconify.design/lucide:star.svg" alt="Estrella" class="star-icon">
+                    <span>4.5</span>
+                </div>
+            </div>
+        </div>
+    </article>
+<!--VESTIDO ESCOTE HALTER-->
+    <article class="product-card category-Vestidos">
+        <div class="card-image-container">
+            <a href="views/detail.html">
+                <img src="./img/vestido_escote_halter.jpeg" alt="Vestido Escote Halter" class="product-img">
+            </a>
+            <label class="fav-btn" aria-label="Añadir a favoritos">
+    <input type="checkbox" class="fav-checkbox">
+    <span class="heart-icon"></span>
+</label>
+        </div>
+        <div class="card-info">
+            <span class="card-category">Vestidos</span>
+            <h3 class="card-title"><a href="views/detail.html">Vestido EScote Halter</a></h3>
+            <div class="card-meta">
+                <span class="card-price">GTQ 250.00</span>
+                <div class="card-rating">
+                    <img src="https://api.iconify.design/lucide:star.svg" alt="Estrella" class="star-icon">
+                    <span>5.0</span>
+                </div>
+            </div>
+        </div>
+    </article>
+<!--CAMISETA DEPORTIVA-->
+    <article class="product-card category-Camisetas">
+        <div class="card-image-container">
+            <a href="views/detail.html">
+                <img src="./img/camiseta_deportiva.jpeg" alt="Camiseta Deportiva" class="product-img">
+            </a>
+            <label class="fav-btn" aria-label="Añadir a favoritos">
+    <input type="checkbox" class="fav-checkbox">
+    <span class="heart-icon"></span>
+</label>
+        </div>
+        <div class="card-info">
+            <span class="card-category">Camisetas</span>
+            <h3 class="card-title"><a href="views/detail.html">Camiseta Deportiva</a></h3>
+            <div class="card-meta">
+                <span class="card-price">GTQ 149.99</span>
+                <div class="card-rating">
+                    <img src="https://api.iconify.design/lucide:star.svg" alt="Estrella" class="star-icon">
+                    <span>5.0</span>
+                </div>
+            </div>
+        </div>
+    </article>
+<!--CAMISA DE COMPRESIÓN-->
+    <article class="product-card category-Camisetas">
+        <div class="card-image-container">
+            <a href="views/detail.html">
+                <img src="./img/camisa_de_compresión.jpg" alt="Camiseta de Compresión" class="product-img">
+            </a>
+            <label class="fav-btn" aria-label="Añadir a favoritos">
+    <input type="checkbox" class="fav-checkbox">
+    <span class="heart-icon"></span>
+</label>
+        </div>
+        <div class="card-info">
+            <span class="card-category">Camisetas</span>
+            <h3 class="card-title"><a href="views/detail.html">Camiseta de Compresión</a></h3>
+            <div class="card-meta">
+                <span class="card-price">GTQ 175.00</span>
+                <div class="card-rating">
+                    <img src="https://api.iconify.design/lucide:star.svg" alt="Estrella" class="star-icon">
+                    <span>4.5</span>
+                </div>
+            </div>
+        </div>
+    </article>
+<!--CAMISA MANGA LARGA-->
+    <article class="product-card category-Camisetas">
+        <div class="card-image-container">
+            <a href="views/detail.html">
+                <img src="./img/camisa_manga_larga.jpg" alt="Camiseta Manga Larga" class="product-img">
+            </a>
+            <label class="fav-btn" aria-label="Añadir a favoritos">
+    <input type="checkbox" class="fav-checkbox">
+    <span class="heart-icon"></span>
+</label>
+        </div>
+        <div class="card-info">
+            <span class="card-category">Camisetas</span>
+            <h3 class="card-title"><a href="views/detail.html">Camiseta Manga Larga</a></h3>
+            <div class="card-meta">
+                <span class="card-price">GTQ 275.00</span>
+                <div class="card-rating">
+                    <img src="https://api.iconify.design/lucide:star.svg" alt="Estrella" class="star-icon">
+                    <span>4.5</span>
+                </div>
+            </div>
+        </div>
+    </article>
+<!--POLO DEPORTIVA-->
+    <article class="product-card category-Camisetas">
+        <div class="card-image-container">
+            <a href="views/detail.html">
+                <img src="./img/polo_deportiva.jpg" alt="Polo Deportiva" class="product-img">
+            </a>
+            <label class="fav-btn" aria-label="Añadir a favoritos">
+    <input type="checkbox" class="fav-checkbox">
+    <span class="heart-icon"></span>
+</label>
+        </div>
+        <div class="card-info">
+            <span class="card-category">Camisetas</span>
+            <h3 class="card-title"><a href="views/detail.html">Polo Deportiva</a></h3>
+            <div class="card-meta">
+                <span class="card-price">GTQ 150.00</span>
+                <div class="card-rating">
+                    <img src="https://api.iconify.design/lucide:star.svg" alt="Estrella" class="star-icon">
+                    <span>4.5</span>
+                </div>
+            </div>
+        </div>
+    </article>
+<!--SHORT DE VERANO-->
+    <article class="product-card category-Verano">
+        <div class="card-image-container">
+            <a href="views/detail.html">
+                <img src="./img/short_de_verano.jpg" alt="Short de Verano" class="product-img">
+            </a>
+            <label class="fav-btn" aria-label="Añadir a favoritos">
+    <input type="checkbox" class="fav-checkbox">
+    <span class="heart-icon"></span>
+</label>
+        </div>
+        <div class="card-info">
+            <span class="card-category">Verano</span>
+            <h3 class="card-title"><a href="views/detail.html">Short de Verano</a></h3>
+            <div class="card-meta">
+                <span class="card-price">GTQ 70.99</span>
+                <div class="card-rating">
+                    <img src="https://api.iconify.design/lucide:star.svg" alt="Estrella" class="star-icon">
+                    <span>4.5</span>
+                </div>
+            </div>
+        </div>
+    </article>
+<!--PLAYERA DE VERANO-->
+        <article class="product-card category-Verano">
+        <div class="card-image-container">
+            <a href="views/detail.html">
+                <img src="./img/playera_de_verano.jpg" alt="Playera de Verano" class="product-img">
+            </a>
+            <label class="fav-btn" aria-label="Añadir a favoritos">
+    <input type="checkbox" class="fav-checkbox">
+    <span class="heart-icon"></span>
+</label>
+        </div>
+        <div class="card-info">
+            <span class="card-category">Verano</span>
+            <h3 class="card-title"><a href="views/detail.html">Playera de Verano</a></h3>
+            <div class="card-meta">
+                <span class="card-price">GTQ 251.00</span>
+                <div class="card-rating">
+                    <img src="https://api.iconify.design/lucide:star.svg" alt="Estrella" class="star-icon">
+                    <span>4.5</span>
+                </div>
+            </div>
+        </div>
+    </article>
+<!--SHORT DE MAYA-->
+    <article class="product-card category-Verano">
+        <div class="card-image-container">
+            <a href="views/detail.html">
+                <img src="./img/short_de_maya.jpg" alt="Short Maya" class="product-img">
+            </a>
+            <label class="fav-btn" aria-label="Añadir a favoritos">
+    <input type="checkbox" class="fav-checkbox">
+    <span class="heart-icon"></span>
+</label>
+        </div>
+        <div class="card-info">
+            <span class="card-category">Verano</span>
+            <h3 class="card-title"><a href="views/detail.html"> Short de Maya</a></h3>
+            <div class="card-meta">
+                <span class="card-price">GTQ 51.99</span>
+                <div class="card-rating">
+                    <img src="https://api.iconify.design/lucide:star.svg" alt="Estrella" class="star-icon">
+                    <span>4.5</span>
+                </div>
+            </div>
+        </div>
+    </article>
+<!--SOMBRERO DE VERANO-->
+    <article class="product-card category-Verano">
+        <div class="card-image-container">
+            <a href="views/detail.html">
+                <img src="./img/sombrero_de_verano.jpg" alt="Sombrero de Verano" class="product-img">
+            </a>
+            <label class="fav-btn" aria-label="Añadir a favoritos">
+    <input type="checkbox" class="fav-checkbox">
+    <span class="heart-icon"></span>
+</label>
+        </div>
+        <div class="card-info">
+            <span class="card-category">Verano</span>
+            <h3 class="card-title"><a href="views/detail.html">Sombrero de Verano</a></h3>
+            <div class="card-meta">
+                <span class="card-price">GTQ 51.99</span>
+                <div class="card-rating">
+                    <img src="https://api.iconify.design/lucide:star.svg" alt="Estrella" class="star-icon">
+                    <span>4.5</span>
+                </div>
+            </div>
+        </div>
+    </article>
+<!--BARRA INFERIOR-->
+</main>
+
+    <nav class="bottom-nav">
+        <a href="index.html" class="nav-item active">
+            <img src="https://api.iconify.design/lucide:home.svg" alt="Inicio">
+
+            <span>Inicio</span>
+        </a>
+        <a href="views/checkout.html" class="nav-item">
+            <img src="https://api.iconify.design/lucide:shopping-cart.svg" alt="Carrito">
+            <span>Carrito</span>
+        </a>
+        <a href="./views/detail.html" class="nav-item">
+            <img src="https://api.iconify.design/lucide:heart.svg" alt="Favoritos">
+            <span>Favoritos</span>
+        </a>
+        <a href="./profile.html" class="nav-item">
+            <img src="https://api.iconify.design/lucide:user.svg" alt="Perfil">
+            <span>Perfil</span>
+        </a>
+    </nav>
+<input type="checkbox" id="modal-toggle" class="modal-pointer">
+
+<label for="modal-toggle" class="trigger-btn">Ver más</label>
+
+<div class="modal-overlay">
+    <div class="modal-content">
+        <h2>Detalles del Producto</h2>
+        <p>Selecciona el producto que quieres ver a detalle</p>
+        <label for="modal-toggle" class="close-btn">Cerrar</label>
+    </div>
+</div>
+</body>
+</html>

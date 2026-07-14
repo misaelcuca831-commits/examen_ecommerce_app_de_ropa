@@ -1,0 +1,272 @@
+/* ==========================================================================
+    ESTILOS GENERALES Y HOME HEADER
+   ========================================================================== */
+.home-header {
+    padding: 24px 20px;
+    background-color: var(--white);
+}
+.user-profile {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+.avatar {
+    width: 65px;
+    height: 85px;
+    border-radius: 100%;
+    object-fit: cover;
+}
+.welcome-text span {
+    font-size: 13px;
+    color: var(--secondary-color);
+}
+.welcome-text h1 {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+/* ==========================================================================
+    BUSCADOR
+   ========================================================================== */
+.search-section { padding: 0 20px 16px 20px; }
+.search-bar {
+    display: flex;
+    align-items: center;
+    background: var(--white);
+    padding: 13px 16px;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--border-color);
+}
+.search-bar input {
+    border: none;
+    outline: none;
+    width: 100%;
+    margin-left: 10px;
+    font-family: var(--font-main);
+}
+
+/* ==========================================================================
+    CATEGORÍAS 
+   ========================================================================== */
+.categories-section {
+    display: flex;
+    gap: 12px;
+    padding: 0 20px 20px 20px;
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+.category-chip {
+    cursor: pointer;
+    display: inline-block;
+}
+/* Ocultar por completo el input radio original */
+.category-chip input[type="radio"] {
+    display: none;
+}
+/* Estilo base del texto/diseño del chip */
+.category-chip span {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: var(--bg-light);
+    color: var(--secondary-color);
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    white-space: nowrap;
+    border: 1px solid var(--border-color);
+    transition: var(--transition-fast);
+}
+/* Cambio de estado activo del chip */
+.category-chip input[type="radio"]:checked + span {
+    background-color: var(--primary-color);
+    color: var(--white);
+    border-color: var(--primary-color);
+}
+
+/* ==========================================================================
+    GRID DE PRODUCTOS Y TARJETAS
+   ========================================================================== */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    padding: 0 20px 100px 20px;
+}
+.product-card {
+    background: var(--white);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+}
+.card-image-container {
+    position: relative;
+    background: #F0F0F0;
+    aspect-ratio: 3/4;
+}
+.card-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.fav-btn {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: var(--white);
+    border: none;
+    padding: 8px;
+    border-radius: 50%;
+    box-shadow: var(--shadow-sm);
+    cursor: pointer;
+}
+.card-info { padding: 12px; }
+.card-category { font-size: 11px; color: var(--secondary-color); text-transform: uppercase; }
+.card-title { font-size: 14px; font-weight: 500; margin: 4px 0 8px 0; }
+.card-meta { display: flex; justify-content: space-between; align-items: center; }
+.card-price { font-weight: 700; font-size: 15px; }
+.card-rating { display: flex; align-items: center; gap: 4px; font-size: 12px; }
+.star-icon { filter: invert(74%) sepia(95%) saturate(800%) hue-rotate(355deg); }
+
+/* ==========================================================================
+    NAVEGACIÓN INFERIOR (BOTTOM NAV)
+   ========================================================================== */
+.bottom-nav {
+    position: fixed;
+    bottom: 0; left: 0; right: 0;
+    height: 65px;
+    background: var(--white);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-top: 1px solid var(--border-color);
+    box-shadow: 0 -4px 12px rgba(0,0,0,0.03);
+    z-index: 10;
+}
+.nav-item { display: flex; flex-direction: column; align-items: center; font-size: 11px; color: var(--secondary-color); }
+.nav-item.active { color: var(--primary-color); font-weight: 600; }
+
+/* ==========================================================================
+    INTERACTIVIDAD: MODAL
+   ========================================================================== */
+.modal-pointer { display: none; }
+.modal-overlay {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.6);
+    backdrop-filter: blur(4px);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    padding: 20px;
+}
+/* Activa el modal al hacer check */
+.modal-pointer:checked ~ .modal-overlay {
+    display: flex;
+}
+.modal-content {
+    background: var(--white);
+    padding: 24px;
+    border-radius: var(--radius-md);
+    max-width: 400px;
+    width: 100%;
+}
+.trigger-btn, .see-more-trigger {
+    color: var(--primary-color);
+    font-weight: 600;
+    text-decoration: underline;
+    cursor: pointer;
+}
+.close-btn, .close-modal-btn {
+    display: block;
+    margin-top: 16px;
+    text-align: center;
+    background: var(--primary-color);
+    color: var(--white);
+    padding: 10px;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+}
+
+/* ==========================================================================
+    INTERACTIVIDAD: LÓGICA DE FILTRADO (Pseudo-clase :has)
+   ========================================================================== */
+.categories-section:has(input[value="Vestidos"]:checked) ~ .products-grid .product-card,
+.categories-section:has(input[value="Camisetas"]:checked) ~ .products-grid .product-card,
+.categories-section:has(input[value="Verano"]:checked) ~ .products-grid .product-card {
+    display: none !important;
+}
+.categories-section:has(input[value="all"]:checked) ~ .products-grid .product-card {
+    display: flex !important;
+}
+.categories-section:has(input[value="Vestidos"]:checked) ~ .products-grid .category-Vestidos {
+    display: flex !important;
+}
+.categories-section:has(input[value="Camisetas"]:checked) ~ .products-grid .category-Camisetas {
+    display: flex !important;
+}
+.categories-section:has(input[value="Verano"]:checked) ~ .products-grid .category-Verano {
+    display: flex !important;
+}
+
+/* ==========================================================================
+    RESPONSIVE DESIGN (MEDIA QUERIES)
+   ========================================================================== */
+@media (min-width: 768px) {
+    .products-grid { grid-template-columns: repeat(4, 1fr); }
+    .bottom-nav { width: 400px; margin: 0 auto; border-radius: 30px 30px 0 0; }
+}
+
+@media (min-width: 1024px) {
+    .products-grid, .detail-container, .checkout-container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr); 
+        gap: 40px;
+        max-width: 1100px;
+        margin: 40px auto;
+        padding: 0 20px;
+    }
+    .detail-container, .checkout-container {
+        grid-template-columns: 1fr 1fr;
+    }
+    .home-header, .detail-header, .checkout-header, .search-section, .categories-section {
+        max-width: 1100px;
+        margin: 0 auto;
+    }
+}
+/* ==========================================================================
+    INTERACTIVIDAD: BOTÓN DE FAVORITOS CSS
+   ========================================================================== */
+
+/* Ocultamos el checkbox real del navegador */
+.fav-btn input[type="checkbox"] {
+    display: none;
+}
+
+/* Diseñamos el contenedor del corazón base (vacio) */
+.fav-btn .heart-icon {
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-color: var(--secondary-color); /* Color gris inicial */
+    /* Usamos el ícono de Lucide Heart como una máscara CSS para poder cambiarle el color libremente */
+    -webkit-mask: url("https://api.iconify.design/lucide:heart.svg") no-repeat center;
+    mask: url("https://api.iconify.design/lucide:heart.svg") no-repeat center;
+    -webkit-mask-size: contain;
+    mask-size: contain;
+    transition: var(--transition-fast);
+}
+
+/* Efecto Hover: Al pasar el mouse se vuelve un poco más oscuro */
+.fav-btn:hover .heart-icon {
+    background-color: var(--primary-color);
+}
+
+/* Al seleccionar el checkbox, cambiamos el ícono y lo pintamos de rojo */
+.fav-btn input[type="checkbox"]:checked + .heart-icon {
+    background-color: #E53E3E; /* Rojo vibrante de favoritos */
+    /* Cambiamos la máscara al ícono de corazón relleno de Lucide */
+    -webkit-mask: url("https://api.iconify.design/lucide:heart-handshake.svg") no-repeat center; 
+    mask: url("https://api.iconify.design/ant-design:heart-filled.svg") no-repeat center;
+    transform: scale(1.15); /* animación de pulsación */
+}

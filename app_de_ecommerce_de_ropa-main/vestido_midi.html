@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <link rel="stylesheet" href="../css/variables.css">
+    <link rel="stylesheet" href="../css/checkout.css">
+</head>
+<body>
+
+    <header class="checkout-header">
+        <a href="../index.html" class="back-btn">
+            <img src="https://api.iconify.design/lucide:arrow-left.svg" alt="Atrás">
+        </a>
+        <h2>Checkout</h2>
+        <button class="menu-hamburger" aria-label="Menú">
+            <img src="https://api.iconify.design/lucide:menu.svg" alt="Menú">
+        </button>
+    </header>
+
+    <main class="checkout-container">
+        <section class="cart-items-section">
+            <article class="cart-item-card">
+                <img src="./img/vestido_midi_corte_A.jpg" alt="Vestido Casual" class="cart-item-img">
+                <div class="cart-item-details">
+                    <span class="item-category">Vestidos</span>
+                    <h3>Vestido Midi Corte A</h3>
+                    <span class="item-price">GTQ 150.00</span>
+                    <div class="item-qty-control">
+                        <button type="button" aria-label="Disminuir cantidad">-</button>
+                        <span>1</span>
+                        <button type="button" aria-label="Aumentar cantidad">+</button>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <section class="billing-section">
+            <h3>Método de Pago</h3>
+            <div class="payment-options">
+                <label class="payment-card">
+                    <input type="radio" name="payment" checked>
+                    <div class="payment-box">💳 Tarjeta Crédito / Débito</div>
+                </label>
+            </div>
+
+            <div class="summary-box">
+                <div class="summary-row"><span>Productos (1)</span><span>GTQ 150.00</span></div>
+                <div class="summary-row"><span>Costo de envío</span><span>GTQ 5.00</span></div>
+                <div class="summary-row"><span>Descuentos</span><span>GTQ 0.00</span></div>
+                <hr>
+                <div class="summary-row total"><span>Subtotal</span><span>GTQ 155.00</span></div>
+            </div>
+
+            <input type="checkbox" id="success-toggle" class="success-state" style="display: none;">
+            
+            <label for="success-toggle" class="pay-trigger-btn">Pagar GTQ 155.00</label>
+
+            <div class="success-modal-overlay">
+                <div class="success-modal-content">
+                    <div class="success-icon">🎉</div>
+                    <h3>¡Compra Confirmada!</h3>
+                    <p>Tu orden ha sido procesada con éxito. Pronto recibirás un correo con el detalle de tu envío.</p>
+                    <a href="../index.html" class="back-to-home-btn">Volver al Inicio</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>
