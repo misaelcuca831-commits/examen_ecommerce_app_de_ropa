@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FakeStore App - Tienda en Línea</title>
+    <!-- Estilos CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- FontAwesome para Iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Navegación Principal -->
+    <header class="navbar">
+        <div class="logo">
+            <i class="fa-solid fa-bag-shopping"></i>
+            <h1>FakeStore</h1>
+        </div>
+        <div class="cart-btn-container" id="cart-toggle" aria-label="Ver carrito">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span id="cart-count">0</span>
+        </div>
+    </header>
+
+    <!-- Contenido Principal -->
+    <main class="container">
+        <!-- Sección de Filtros y Búsqueda -->
+        <section class="controls" aria-label="Controles de búsqueda y filtrado">
+            <input type="text" id="search-input" placeholder="Buscar productos por nombre o descripción...">
+            <select id="category-filter" aria-label="Filtrar por categoría">
+                <option value="all">Todas las categorías</option>
+            </select>
+            <select id="sort-filter" aria-label="Ordenar productos">
+                <option value="default">Ordenar por...</option>
+                <option value="price-asc">Precio: Menor a Mayor</option>
+                <option value="price-desc">Precio: Mayor a Menor</option>
+                <option value="name-asc">Nombre: A - Z</option>
+                <option value="name-desc">Nombre: Z - A</option>
+            </select>
+        </section>
+
+        <!-- Grilla donde se renderizan las tarjetas dinámicamente -->
+        <section id="products-grid" class="products-grid" aria-live="polite">
+            <!-- Cargado vía JavaScript -->
+        </section>
+    </main>
+
+    <!-- Modal de Detalle de Producto -->
+    <div id="product-modal" class="modal">
+        <div class="modal-content">
+            <button id="close-modal" class="close-modal">&times;</button>
+            <div class="modal-body">
+                <div class="modal-image-container">
+                    <img id="modal-img" src="" alt="">
+                </div>
+                <div class="modal-info">
+                    <span id="modal-category" class="product-category"></span>
+                    <h2 id="modal-title"></h2>
+                    <p id="modal-description"></p>
+                    <div id="modal-rating" class="product-rating"></div>
+                    <div class="modal-footer">
+                        <span id="modal-price" class="product-price"></span>
+                        <button id="modal-add-btn" class="btn-add-cart">
+                            <i class="fa-solid fa-cart-plus"></i> Agregar al carrito
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Barra Lateral del Carrito (Sidebar) -->
+    <aside class="cart-sidebar" id="cart-sidebar" aria-label="Carrito de compras">
+        <div class="cart-header">
+            <h2><i class="fa-solid fa-cart-shopping"></i> Tu Carrito</h2>
+            <button id="close-cart" aria-label="Cerrar carrito">&times;</button>
+        </div>
+        <div class="cart-items" id="cart-items">
+            <!-- Ítems agregados vía JavaScript -->
+        </div>
+        <div class="cart-footer">
+            <h3>Total: $<span id="cart-total">0.00</span></h3>
+            
+            <!-- Simulación de Descuento Carrito de compras(1H) -->
+            <div class="discount-simulation">
+                <label for="discount-input">Descuento (%):</label>
+                <input type="number" id="discount-input" min="0" max="100" placeholder="0" value="0">
+                <p class="discounted-total">Total con descuento: $<span id="cart-discounted-total">0.00</span></p>
+            </div>
+
+            <button id="checkout-btn" class="btn-checkout">Procesar Compra</button>
+        </div>
+    </aside>
+
+    <!-- Script Principal -->
+    <script src="app.js"></script>
+</body>
+</html>
